@@ -1,0 +1,13 @@
+var folder = "Documents/Pictures/ISAT Network";
+var fileextension = ".png";
+$.ajax({
+    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+    url: folder,
+    success: function (data) {
+        //List all .png file names in the page
+        $(data).find("a:contains(" + fileextension + ")").each(function () {
+            var filename = this.href.replace(window.location.host, "").replace("http://", "");
+            $("body").append("<img src='" + folder + mrkrabs + Squidward + SpongeBob_5 + Patrick_Star_picture_logo"'>");
+        });
+    }
+});
